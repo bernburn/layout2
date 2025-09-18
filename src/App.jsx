@@ -1,32 +1,83 @@
 import "./App.css";
 
+function PeachBox() {
+  return <div className="peachBox"></div>;
+}
+
+function InnerBox(props) {
+  return <div className="innerBox">{props.name}</div>;
+}
+function PeachBox2() {
+  return (
+    <div className="peachBox middle">
+      <InnerBox name="Bern" />
+      <InnerBox name="Musngi" />
+    </div>
+  );
+}
+
+function Header() {
+  return (
+    <div className="lightBlueContainer">
+      <PeachBox />
+      <PeachBox2 />
+      <PeachBox />
+    </div>
+  );
+}
+
+function MainBox() {
+  return <div className="mainBox"></div>;
+}
+
+function AsideBox() {
+  return <div className="asideBox"></div>;
+}
+
+function AsideContainer() {
+  return (
+    <div className="asideContainer">
+      <AsideBox />
+      <AsideBox />
+    </div>
+  );
+}
+
+function Body() {
+  return (
+    <div className="container">
+      <MainBox />
+      <AsideContainer />
+    </div>
+  );
+}
+
+function SmallPeachBox(props) {
+  return <div className="smallPeachBox">{props.courseSection}</div>;
+}
+
+function PurpleBox() {
+  return <div className="purpleBox"></div>;
+}
+
+function Footer() {
+  return (
+    <div className="blueContainer">
+      <PurpleBox />
+      <SmallPeachBox courseSection="C-PCIT9" />
+      <SmallPeachBox courseSection="IT3A" />
+      <PurpleBox />
+    </div>
+  );
+}
+
 function App() {
   return (
     <>
-      <div className="containerBody">
-        <div className="main-container">
-          <div className="lightBlueContainer">
-            <div className="peachBox"></div>
-            <div className="peachBox middle">
-              <div className="innerBox"></div>
-              <div className="innerBox"></div>
-            </div>
-            <div className="peachBox"></div>
-          </div>
-          <div className="container">
-            <div className="mainBox"></div>
-            <div className="asideContainer">
-              <div className="asideBox"></div>
-              <div className="asideBox"></div>
-            </div>
-          </div>
-          <div className="blueContainer">
-            <div className="purpleBox"></div>
-            <div className="smallPeachBox"></div>
-            <div className="smallPeachBox"></div>
-            <div className="purpleBox"></div>
-          </div>
-        </div>
+      <div className="main-container">
+        <Header />
+        <Body />
+        <Footer />
       </div>
     </>
   );

@@ -1,6 +1,10 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-size: 45px;
+  color: #ffffff;
 }
 
 .main-container {
@@ -41,14 +45,11 @@ body {
   display: flex; //pang align center lang
   align-items: center;
   justify-content: center;
+  padding: 35px;
   flex: 1;
-  height: 120px;
   background-color: #fac0cb;
   border: 8px solid #f40005;
   box-sizing: border-box;
-  text-align: center;
-  font-size: 50px;
-  font-family: Arial, sans-serif;
 }
 
 .container {
@@ -75,7 +76,6 @@ body {
 
 .asideBox {
   flex: 1;
-  height: 50%;
   background-color: #fabbbb;
   border: 8px solid #a52b2a;
   box-sizing: border-box;
@@ -96,12 +96,11 @@ body {
   background-color: #e2deff;
   border: 8px solid #6a5acd;
   box-sizing: border-box;
-  height: 150px;
 }
 
 .smallPeachBox {
   flex: 0.5;
-  height: 150px;
+  padding: 40px;
   background-color: #fcdab9;
   border: 8px solid #f78072;
   box-sizing: border-box;
